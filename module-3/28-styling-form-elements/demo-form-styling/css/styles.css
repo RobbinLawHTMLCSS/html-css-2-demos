@@ -1,0 +1,111 @@
+:root {
+  --cream: #e5e1db;
+  --yellow: #cfb450;
+  --grey: #6b6267;
+  --lt-grey: #d2cfd1;
+}
+
+body {
+  font-family: Arial Narrow,Arial,sans-serif; 
+}
+
+header{
+  background-color: var(--cream);
+  padding: 0 1rem;
+}
+
+/* for screen readers only */
+.sr-only{
+  position: absolute;
+  left: -10000px; /* a very large number to move it off the screen */
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+.header-top{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+button,
+input[type=submit]{
+  background-color: var(--grey);
+  color: var(--cream);
+  border-radius: 5px;
+  cursor: pointer;
+  text-transform: uppercase;
+  max-height: 2rem;
+}
+
+/* style the search bar form */
+input[id=searchbar]{
+  width: 100%;
+  background-image: url(../img/magnifying-glass.svg);
+  background-repeat: no-repeat;
+  background-size: 30px 30px;
+  /*background-size: contain;*/
+  padding: 0.5rem;
+  border-radius: 5px;
+  border: none;
+  /* background position: sets the initial position for each background image.
+  The position is relative to then position layer set ny background-origin.*/
+  background-position: center left 5px;
+  padding-left: 40px;
+  margin-bottom: 0.5rem;
+}
+
+section{
+  padding: 1rem;
+}
+
+.login-form{
+  border-radius: 5px;
+  border: 1px solid var(--lt-grey);
+  box-shadow: 3px 3px 5px var(--lt-grey);
+  padding: 1.5rem;
+}
+
+.login-form label{
+  display: block;
+}
+
+.login-form input[type=email],
+.login-form input[type=password]{
+  border: none;
+  border-bottom: 1px solid var(--lt-grey);
+  padding: 0.5rem;
+  width: 50%;
+}
+
+.login-form > div{
+  margin-bottom: 1rem;
+}
+
+*:focus{
+  outline: none !important
+}
+
+.login-form input[type=email]:invalid,
+.login-form input[type=password]:invalid{
+  outline: 2px solid tomato;
+}
+
+.login-form input[type=email]:valid,
+.login-form input[type=password]:valid{
+  outline: 2px solid green;
+}
+
+input[type=submit]{
+  background-color: var(--yellow);
+  padding: 0.25rem 0.5rem;
+  border: 2px solid var(--yellow);
+}
+
+input[type=submit]:hover{
+  background-color: white;
+  color: var(--grey);
+  border: 2px solid var(--yellow);
+}

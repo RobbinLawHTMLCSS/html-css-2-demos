@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Responsive Form Layout</title>
+		<link rel="stylesheet" href="css/reset.css">
+		<link rel="stylesheet" href="css/styles.css">
+		<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700&display=swap" rel="stylesheet">
+	</head>
+	<body>
+		<header>
+			<h1>HTML5 Forms</h1>
+		</header>
+		<main>
+			<div class="container">
+				<form action="#" method="POST">
+					<!-- Every input requires a label (lable/input pair).
+					The 'for' and 'id' attributes must match!-->
+					<div class="flex-container">
+						<label for="text-field">Generic Text Field</label>
+						<input id="text-field" name="text-field" type="text" placeholder="First and Last Name" autofocus>
+					</div>
+					<!-- email input -->
+					<div>
+						<label for="email">Email Address</label>
+						<input id="email" name="email" type="email" autocomplete="off">
+						<!-- input email type is better that using text. When a user is
+						inputting their email, the browser will look for an @ symbol
+					and a '.xx' -->
+					</div>
+					<!-- phone input -->
+					<div>
+						<label for="phone-number">Phone #</label>
+						<input id="phone-number" name="phone-number" type="tel" maxlength="10" required placeholder="##########" pattern="[0-9]{10}" title="Phone number must be 10 digits, e.g., 7805551212">
+					</div>
+					<!-- url input -->
+					<div>
+						<label for="url">Website URL</label>
+						<input id="url" name="url" type="url">
+						<!-- the url type must start with a valid URL: http:// or
+						https:// to pass the submit -->
+					</div>
+					<!-- password input -->
+					<div>
+						<label for="password">Enter Password</label>
+						<input id="password" name="password" type="password">
+						<!-- the password does not diplay except for *'s -->
+					</div>
+					<!-- range slider -->
+					<div>
+						<label for="range">Range Slider</label>
+						<input id="range" name="range" type="range" min="0" max="10" step="1">
+					</div>
+					<!-- color selector -->
+					<div>
+						<label for="color">Color Selector</label>
+						<input id="color" name="color" type="color" value="#505050">
+					</div>
+					<!-- fieldsets are used for grouping controls, or section of a form
+					together. Legend element is the caption for the gouping. -->
+					<fieldset>
+						<legend>Radio Button Field</legend>
+						<!-- radio busstons MUST share the same name attribute to be connected! -->
+						<div>
+							<input id="chocolate" type="radio" value="Chocolate" name="ice-cream">
+							<label for="chocolate">Chocolate Ice Cream</label>
+						</div>
+						<div>
+							<input id="strawberry" type="radio" value="Strawberry" name="ice-cream">
+							<label for="strawberry">Strawberry Ice Cream</label>
+						</div>
+						<div>
+							<input id="cotton-candy" type="radio" value="Cotton Candy" name="ice-cream">
+							<label for="cotton-candy">Cotton Candy Ice Cream</label>
+						</div>
+					</fieldset>
+					<!-- checkbox controls: share the same name attribute to be connected.
+					Use the 'checked' attribute to select the default. -->
+					<fieldset>
+						<legend>Checkbox Field</legend>
+						<div>
+							<input id="markup" type="checkbox" name="web-design" value="html" checked>
+							<label for="markup">HTML</label>
+						</div>
+						<div>
+							<input id="web-styling" type="checkbox" name="web-design" value="css">
+							<label for="web-styling">CSS</label>
+						</div>
+						<div>
+							<input id="javascript" type="checkbox" name="web-design" value="js">
+							<label for="javascript">JS</label>
+						</div>
+					</fieldset>
+					<fieldset>
+						<!-- Select menu (dropdown menu): some available attributes that are unique: 1. multiple, 2. size, 3. disabled -->
+						<legend>Dropdown Select Options</legend>
+						<label for="select-field">Select an Option</label>
+						<select id="select-field" name="select-field">
+							<option value="" disabled>Please Select an Option</option>
+							<option value="1">First</option>
+							<option value="2">Second</option>
+							<option value="3">Third</option>
+						</select> 
+					</fieldset>
+					<!-- textarea -->
+					<div>
+						<label for="message">Leave a Message</label>
+						<textarea id="message" name="message" cols="30" rows="10"></textarea>
+					</div>
+					<div>
+						<input type="submit" value="Send Form" name="submit">
+					</div>
+				</form>
+			</div> 
+		</main>
+	</body>
+</html>

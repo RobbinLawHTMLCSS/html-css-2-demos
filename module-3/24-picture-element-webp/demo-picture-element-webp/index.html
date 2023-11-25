@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Picture Element with Webp Format</title>
+</head>
+<body>
+    <img src="img/spring.jpg" alt="spring">
+    <!-- 
+        If the web browser does not support the WebP format,
+        then the <img> element will be displayed.
+    -->
+    <picture>
+        <source srcset="img/spring.webp" type="image/webp">
+        <img src="img/spring.jpg" alt="spring">
+    </picture>
+
+</body>
+</html>

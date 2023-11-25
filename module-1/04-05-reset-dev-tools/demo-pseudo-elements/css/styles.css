@@ -1,0 +1,99 @@
+/* This is for testing purposes. */
+body {
+	background-color: azure;
+}
+
+/* This is for our wrapper <div>. */
+.container {
+	width: 960px;
+	margin: 0 auto;
+	line-height: 1.5;
+	font-size: 100%;
+	font-family: Arial,sans-serif;
+}
+
+h1{
+	font-size: 72px;
+	font-weight: bold;
+	color:steelblue;
+}
+
+h2{
+	font-size: 48px;
+	font-weight:bolder;
+}
+
+h3{
+	font-size:36px;
+	color:slategrey;
+}
+
+main{
+	background-color: #fff;
+	padding: 24px;
+	border: 2px dashed green;
+	margin-bottom: 56px;
+}
+
+section ol li{
+	list-style-type:decimal;
+}
+
+section ul li{
+	list-style-type: disc;
+}
+
+section ul,
+section ol{
+	margin-left:24px;
+}
+
+section p{
+	margin-bottom:12px;
+}
+
+/* ----- Pseudo Elemenet Selectors ----- */
+
+/* Drop cap */
+p.drop-cap::first-letter{
+	font-family: 'Times New Roman', Times, serif;
+	font-size: 72px;
+	font-style: italic;
+	float: left;
+	line-height: 0.6;
+	margin: 10px 10px 0 0;
+	color: darkblue;
+}
+
+/* First Line */
+p:last-child::first-line {
+	color: darkblue;
+	font-weight: bold;
+}
+
+/* Marker */
+::marker{
+	font-weight: bold;
+	color: rgb(126, 15, 236);
+	font-size: 24px;
+}
+
+/* Selection */
+::selection{
+	color: yellow;
+	background: red;
+}
+
+blockquote{
+	font-style: oblique;
+}
+
+footer.drop-cap::first-letter{
+	font-family: 'Time New Roman', Times, serif;
+	font-size: 48px;
+	font-style: italic;
+	float: left;
+	line-height: 1;
+	margin: 0 10px 0 0;
+	color: darkblue;
+}

@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="description" content="Header with accessibile Search Bar">
+		<title>Demo - Styling Forms</title>
+		<link rel="stylesheet" href="css/reset.css">
+		<link rel="stylesheet" href="css/styles.css">
+	</head>
+  <body>
+		<header>
+			<div class="header-top">
+				<h1 class="sr-only">Logo Name</h1>
+				<img src="img/logo.jpg" alt="logo">
+				<button>Menu</button>
+			</div>
+			<form action="#" method="GET" role="search">
+				<label for="searchbar" class="sr-only">Search</label>
+				<input id="searchbar" type="text" placeholder="Search">
+			</form>
+		</header>
+		<main>
+			<section>
+				<h2>Log In</h2>
+				<form class="login-form" action="#" method="POST">
+					<div>
+						<label for="email">Email</label>
+						<input id="email" type="email" required>
+					</div>
+					<div>
+						<label for="password">Password</label>
+						<input id="password" type="password" required autocomplete="off" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters">
+					</div>
+					<div>
+						<input type="submit" value="sign in">
+					</div>
+				</form>
+			</section>
+		</main>
+  </body>
+</html>

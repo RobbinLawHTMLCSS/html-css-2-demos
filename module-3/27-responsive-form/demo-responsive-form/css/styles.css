@@ -1,0 +1,83 @@
+/* CSS Variables - https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties */
+
+:root{
+  --main-color: #333;
+  --main-font: 'Roboto Condensed', sans-serif;
+}
+
+html{
+  color: var(--main-color);
+  font-family: var(--main-font);
+  font-size: 0.625rem;
+  line-height: 1.5;
+}
+
+header{
+  margin-bottom: 3rem;
+}
+
+h1{
+  text-align: center;
+  font-size: 6rem;
+}
+
+/* remove default fieldset styles */
+fieldset{
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+body{
+  font-size: 2rem;
+}
+
+.container{
+  margin: 0 auto;
+  width: 120rem; /* 120rem = 1920px */
+}
+
+.flex-container{
+  display: flex;
+  flex-direction: column;
+}
+
+/* add some basic form styling */
+form{
+  max-width: 60rem;
+  margin: 0 auto;
+}
+
+label{
+  display: block;
+}
+
+input{
+  width: 60rem;
+}
+
+form div,
+fieldset{
+  margin-bottom: 3rem;
+}
+
+textarea{
+  resize: vertical;
+  min-height: 8rem;
+}
+
+input[type=radio],
+input[type=checkbox]{
+  /* set the width ot thier normal width */
+  width: initial;
+}
+
+/* put radio button & checkbox labels to the right of the controls */
+label[for="chocolate"],
+label[for="strawberry"],
+label[for="cotton-candy"],
+label[for="markup"],
+label[for="web-styling"],
+label[for="javascript"]{
+  display: inline;
+}

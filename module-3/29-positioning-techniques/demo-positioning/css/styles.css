@@ -1,0 +1,84 @@
+/* developer styles go here */
+header{
+  background-color: #344256;
+}
+
+.inner-container{
+  max-width: 960px;
+  margin: 0 auto;
+  border: 1px solid #d1d6dc;
+  position: relative;
+}
+
+.flex{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header img{
+  width: 100px;
+}
+
+.nav-links{
+  display: flex;
+  justify-content: flex-end;
+}
+
+.nav-links a{
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.nav-links li{
+  margin-right: 0.75rem;
+  line-height: 60px;
+}
+
+.ribbon{
+  position:absolute;
+  top: 0;
+  left: 0;
+}
+
+/*
+section{
+  position:relative;
+  top:2.5rem;
+}
+
+section {
+  margin-top: 2.5rem;
+}
+*/
+
+section{
+  padding: 50px 0;
+  background-color: #eaedef;
+  height: 100vh;
+}
+
+.box{
+  width: 300px;
+  height: 300px;
+  background-color: #1a212b;
+  color: green;
+}
+
+/*
+nth-of-type(2n): (2n) represents elements 2 (2x1), 4, (2x2),
+6 (2x3), etc.
+(2n) == (even)
+(2n+1) = (odd)
+*/
+
+.box:nth-of-type(2n){
+  background-color: #465973;
+  position:absolute;
+  left:300px;
+}
+
+.box:last-of-type{
+  background-color: white;
+}
